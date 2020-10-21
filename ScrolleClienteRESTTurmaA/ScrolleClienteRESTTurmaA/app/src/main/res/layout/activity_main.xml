@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/et_nome_filme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:hint="Nome do Filme"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo"
+        tools:ignore="MissingConstraints"
+      />
+
+    <EditText
+        android:id="@+id/et_custo_filme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Custo de Produçao"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et_nome_filme"
+        tools:ignore="MissingConstraints"
+        />
+
+    <EditText
+        android:id="@+id/et_ano_filme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ano de Produçao"
+        tools:ignore="MissingConstraints"
+         />
+
+    <Button
+        tools:ignore="MissingConstraints"
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:hint="Cadastrar Filme"
+        android:onClick="cadastrarFilme"
+        app:layout_constraintTop_toBottomOf="@id/et_nome_filme"
+
+         />
+
+    <Button
+        android:id="@+id/bt_deletar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:hint="Deletar Filme"
+        android:onClick="deletarFilme"
+        app:layout_constraintTop_toBottomOf="@id/bt_cadastrar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_topo">
+
+        <LinearLayout
+            android:id="@+id/ll_conteudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_grande"/>
+-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_grande"
+                android:id="@+id/tv_texto"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
